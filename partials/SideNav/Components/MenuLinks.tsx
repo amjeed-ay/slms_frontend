@@ -15,7 +15,7 @@ const MenuLink = ({
   sideNavOpen,
 }: MenuLinkProp) => {
   return (
-    <li className="mt-2">
+    <li className="mt-2 w-full">
       <button
         onClick={onClick}
         className={cn(styles.btnlink, {
@@ -23,16 +23,9 @@ const MenuLink = ({
         })}
       >
         <span
-          className={cn(styles.topic_link, {
-            [styles.active]: active,
-          })}
-        >
-          {item.id}
-        </span>
-        <span
-          className={`text-base truncate w-44 font-normal ${
+          className={`text-base w-full rounded-md flex p-4 hover:bg-gray-300 truncate font-normal ${
             !sideNavOpen && "hidden"
-          }  ${active && "font-semibold"}`}
+          }  ${active && "font-semibold bg-gray-300"}`}
         >
           {item.title}
         </span>

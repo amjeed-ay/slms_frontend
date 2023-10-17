@@ -1,0 +1,79 @@
+@import @/styles/helpers
+
+.field
+    position: relative
+    &.fieldIcon
+        .input,
+        .textarea
+            padding-left: 66px
+    &.fieldTextarea
+        font-size: 0
+
+.label
+    margin-bottom: 12px
+    +p3
+
+.errorBorder
+    border: 1px solid red
+
+.link
+    position: absolute
+    top: 0
+    right: 0
+    color: $n6
+    transition: color .2s
+    &:hover
+        color: $s
+
+.wrap
+    position: relative
+    
+.input,
+.textarea
+    width: 100%
+    border: none
+    border: 1px solid $n3
+    background: transparent
+    border-radius: 20px
+    font-size: 18px
+    font-weight: 600
+    color: $n6
+    transition: border-color .2s
+    +m
+        font-size: 16px
+    &::placeholder
+        color: $n5
+    &:focus
+        border-color: $s
+    &:disabled
+        cursor: not-allowed
+        color: #ccc
+
+.input
+    height: 64px
+    padding: 0 20px
+    +m
+        height: 56px
+
+.textarea
+    height: 204px
+    padding: 16px 20px
+    resize: none
+
+.icon
+    position: absolute
+    top: 16px
+    left: 16px
+    +m
+        top: 12px
+    svg
+        fill: $n7
+
+.addon
+    position: absolute
+    top: 10px
+    right: -20px
+    +m
+        top: 12px
+    svg
+        fill: $n7

@@ -3,6 +3,8 @@ import MenuLink from "./Components/MenuLinks";
 import Icon from "@/components/Icon";
 import styles from "./SideNav.module.sass";
 import classNames from "classnames";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 type SideNavProp = {
   sideNavOpen: boolean;
@@ -11,6 +13,8 @@ type SideNavProp = {
 
 function SideNav({ sideNavOpen, setSideNavOpen }: SideNavProp) {
   const sidebar = useRef(null);
+
+  const pathname = usePathname();
 
   return (
     <div
@@ -30,7 +34,7 @@ function SideNav({ sideNavOpen, setSideNavOpen }: SideNavProp) {
             fill="none"
           />
         </span>{" "}
-        {sideNavOpen && "Questions"}
+        {sideNavOpen && "Testmate"}
       </div>
 
       {/* Links */}
@@ -42,7 +46,7 @@ function SideNav({ sideNavOpen, setSideNavOpen }: SideNavProp) {
               onClick={() => console.log("ok")}
               item={item}
               key={i}
-              active={true}
+              active={pathname === item.href}
             />
           );
         })}
@@ -56,5 +60,9 @@ const menuLinks = [
   {
     title: "Dashboard",
     href: "/dashboard",
+  },
+  {
+    title: "My Courses",
+    href: "/courses",
   },
 ];

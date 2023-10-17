@@ -1,0 +1,38 @@
+@import @/styles/helpers
+
+.entry
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    padding: 64px 0
+    +w
+        padding: 48px 0
+    +m
+        padding: 24px 0
+
+.form
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+.field
+    &:not(:last-child)
+        margin-bottom: 32px
+
+.btns
+    margin-top: auto
+    padding-top: 40px
+
+.authButton
+    width: 100%
+    &:not(:last-child)
+        margin-bottom: 24px
+        +m
+            margin-bottom: 16px
+.button
+    width: 100%
+    background: $os
+    &:not(:last-child)
+        margin-bottom: 24px
+        +m
+            margin-bottom: 16px

@@ -1,0 +1,89 @@
+[class^="button"]
+    display: inline-flex
+    text-align: center
+    align-items: center
+    justify-content: center
+    height: 64px
+    padding: 0 31px
+    background: $os
+    border: 1px solid $p
+    border-radius: 20px
+    font-size: 20px
+    font-weight: 600
+    color: $n6
+    transition: background .2s, border-color .2s, color .2s
+    +m
+        height: 56px
+        border-radius: 16px
+        font-size: 16px
+    &:hover
+        background: darken($n3, 6)
+        border-color: darken($n3, 6)
+
+.button-stroke
+    border-color: $n3
+    background: transparent
+    &:hover
+        background: $s
+        border-color: $s
+        color: $n1
+    &.button-arrow
+        &:hover
+            &:after
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M4.293 1.293a1 1 0 0 1 1.32-.083l.094.083 6 6a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.497-1.32l.083-.094L9.585 8 4.293 2.707a1 1 0 0 1-.083-1.32l.083-.094z' fill='%23fff'/%3E%3C/svg%3E")
+
+.button-arrow
+    position: relative
+    padding: 0 56px
+    &:after
+        content: ""
+        position: absolute
+        top: 50%
+        right: 16px
+        width: 16px
+        height: 16px
+        transform: translateY(-50%)
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M4.293 1.293a1 1 0 0 1 1.32-.083l.094.083 6 6a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.497-1.32l.083-.094L9.585 8 4.293 2.707a1 1 0 0 1-.083-1.32l.083-.094z' fill='%23161616'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+
+.button-circle
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    padding: 0
+    border-color: $n3
+    background: none
+    border-radius: 50%
+    font-size: 0
+    svg
+        fill: $n7
+        transition: fill .2s
+    &:hover
+        background: $s
+        border-color: $s
+        svg
+            fill: $n1
+
+.button-square
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    padding: 0
+    border-color: $n3
+    background: none
+    font-size: 0
+    &:hover
+        background: $s
+        border-color: $s
+        svg
+            fill: $s
+
+.button-small
+    height: 48px
+    border-color: $n3
+    background: $s
+    &:hover
+        background: none
+        border-color: $s
+        svg
+            fill: $n1
+
